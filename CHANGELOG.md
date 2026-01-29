@@ -53,6 +53,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Shell Script to automate initial setup of symlinks for:
     - ./zsh-custom
 
+#### ./scripts/vpn-restart.sh
+
+- Added shell script to automate resetting Strongswan and etc.
+
 ### Notes
 
 ---

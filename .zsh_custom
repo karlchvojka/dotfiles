@@ -1,10 +1,17 @@
 # User specific settings for zsh
 
 # Aliases
+
 # Show everything (permissions, owner, group, etc.) - directories first, human-readable sizes
 alias la='ls -alhF --group-directories-first --color=auto'
 # Long format without owner/group - directories first, human-readable sizes
 alias ls='ls -AlhF --group-directories-first --color=auto'
+# Reset VPN for TK
+alias vpn-restart='~/dotfiles/scripts/vpn-restart.sh'
+# List Directory Shortcuts
+alias shortcuts='echo "Directory Shortcuts:"; echo "ARCHIVE: $ARCHIVE"; echo "ARCDOCS: $ARCDOCS"; echo "ARCNOTE: $ARCNOTE"; echo "PROJECTS: $PROJECTS"'
+
+# Restart VPN for TK
 
 # Directory Shortcuts
 export ARCHIVE="/run/media/blackburn/working_files/Archives"
