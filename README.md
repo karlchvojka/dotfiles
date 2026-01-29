@@ -34,7 +34,7 @@ NOTE: Start in home folder (~/.)
 ### Clone repo
 
 ```bash
-git clone (Add repo url here)
+git clone git@github.com:karlchvojka/dotfiles.git
 ```
 
 ### Run the setup script
