@@ -13,9 +13,11 @@ A diagram of the structure of the project.
 ```
 /
 ├── .bashrc          # User specific config. Used when starting a non-login shell
-├── .bash_profile          # User specific config. Used when starting a login shell
-└── scripts            # Folder of scripts
-    └── setup.sh          # Sets up Symlinks and etc.
+├── .bash_profile    # User specific config. Used when starting a login shell
+├── CHANGELOG.md     # Change tracking
+├── README.md        # This file
+└── scripts/         # Folder of scripts
+    └── setup.sh     # Sets up Symlinks and etc.
 ```
 
 ---
