@@ -34,6 +34,8 @@ NOTE: Start in home folder (~/.)
 ### Clone repo
 
 ```bash
+mkdir dotfiles
+cd dotfiles
 git clone git@github.com:karlchvojka/dotfiles.git
 ```
 
