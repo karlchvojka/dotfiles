@@ -17,7 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### ./.bash_profile
+
+- Added initial setup check for .bash_rc file
+
 #### ./.bashrc
+
+- Added Initial Setup, Aliases and Directory shortcuts
+
+#### ./.zsh_custom
 
 - Added Initial Setup, Aliases and Directory shortcuts
 
@@ -34,11 +42,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Standard README content for a Project.
 - Added Initial Project Specific details.
 
-#### ./scripts/setup.sh
+#### ./scripts/setup-bash.sh
 
 - Added Shell Script to automate initial setup of symlinks for:
     - ./bashrc
     - ./bash_profile
+
+#### ./scripts/setup-zsh.sh
+
+- Added Shell Script to automate initial setup of symlinks for:
+    - ./zsh-custom
 
 ### Notes
 

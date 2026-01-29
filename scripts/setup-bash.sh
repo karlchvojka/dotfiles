@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Setup script for dotfiles
+# Setup script for bash dotfiles
 
 echo "Setting up dotfiles..."
 

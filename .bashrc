@@ -28,10 +28,10 @@ shopt -s globstar
 
 # Aliases
 # Show everything (permissions, owner, group, etc.) - directories first, human-readable sizes
-alias la='ls -alhF --group-directories-first'
+alias la='ls -alhF --group-directories-first --color=auto'
 
 # Long format without owner/group - directories first, human-readable sizes
-alias ls='ls -AlhF --group-directories-first'
+alias ls='ls -AlhF --group-directories-first --color=auto'
 
 # Directory Shortcuts
 export ARCHIVE="/run/media/blackburn/working_files/Archives"

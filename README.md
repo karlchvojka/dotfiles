@@ -12,12 +12,15 @@ A diagram of the structure of the project.
 
 ```
 /
-├── .bashrc          # User specific config. Used when starting a non-login shell
-├── .bash_profile    # User specific config. Used when starting a login shell
-├── CHANGELOG.md     # Change tracking
-├── README.md        # This file
-└── scripts/         # Folder of scripts
-    └── setup.sh     # Sets up Symlinks and etc.
+├── .bashrc              # User specific config for bash. Used when starting a non-login shell
+├── .bash_profile        # User specific config for bash. Used when starting a login shell
+├── CHANGELOG.md         # Change tracking
+├── README.md            # This file
+├── scripts/             # Folder of scripts
+│   └── setup-bash.sh    # Sets up Symlinks and etc for bash shells
+│   └── setup-zsh.sh     # Sets up Symlinks and etc for zsh shells
+└── .zsh_custom          # User specific config for ZSH shells
+
 ```
 
 ---
@@ -42,13 +45,18 @@ cd ~/dotfiles/scripts/
 
 # Give the setup script executable permissions
 # NOTE: ONLY NEEDS TO BE RAN THE FIRST TIME
-chmod +x setup.sh
+chmod +x setup-[name].sh
 
 # Run setup script
-./setup.sh
+./setup-[name].sh
 
 # Reload the shell config
-source ~/.bashrc 
+
+# bash reload
+source ~/.bashrc
+
+# zsh reload
+source ~/.config/zsh/.zshrc
 ```
 
 ---
