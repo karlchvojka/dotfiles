@@ -65,11 +65,17 @@ echo "Cleaning up PID and control files..."
 sudo rm -f /var/run/charon.pid /var/run/charon.ctl
 check_status "Cleanup files" || exit 1
 
+# Flush
+sudo ip xfrm policy flush
+sudo ip xfrm state flush
+
 # Start StrongSwan
 echo ""
 echo "Starting StrongSwan..."
 sudo systemctl start strongswan-starter
 check_status "Start StrongSwan" || exit 1
+
+sleep 2
 
 # Check status
 echo ""
