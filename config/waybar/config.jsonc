@@ -1,37 +1,72 @@
-// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗
-// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
-// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
-//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-
 {
     "layer": "top",
     "position": "top",
-    "height": 35,
+    "height": 40,
     "spacing": 4,
     "reload_style_on_change": true,
 
-    // Left side modules
+    // Left side
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "group/pill-workspaces",
+        "group/pill-window"
     ],
 
-    // Center modules
+    // Center
     "modules-center": [
-        "clock"
+        "group/pill-clock"
     ],
 
-    // Right side modules
+    // Right side
     "modules-right": [
-        "cpu",
-        "memory",
-        "pulseaudio",
-        "network",
-        "tray",
-        "custom/power"
+        "group/pill-cpu",
+        "group/pill-memory",
+        "group/pill-gpu",
+        "group/pill-status",
+        "group/pill-tray"
     ],
+
+    // -----------------------------------------------------
+    // GROUPS
+    // -----------------------------------------------------
+    "group/pill-workspaces": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/workspaces"]
+    },
+
+    "group/pill-window": {
+        "orientation": "horizontal",
+        "modules": ["hyprland/window"]
+    },
+
+    "group/pill-clock": {
+        "orientation": "horizontal",
+        "modules": ["clock"]
+    },
+
+    "group/pill-cpu": {
+        "orientation": "horizontal",
+        "modules": ["cpu"]
+    },
+
+    "group/pill-memory": {
+        "orientation": "horizontal",
+        "modules": ["memory"]
+    },
+
+    "group/pill-gpu": {
+        "orientation": "horizontal",
+        "modules": ["custom/gpu"]
+    },
+
+    "group/pill-status": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio", "network"]
+    },
+
+    "group/pill-tray": {
+        "orientation": "horizontal",
+        "modules": ["tray", "custom/power"]
+    },
 
     // -----------------------------------------------------
     // MODULE CONFIGURATIONS
@@ -63,6 +98,13 @@
         "format": " {percentage}%",
         "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
         "interval": 2
+    },
+
+    "custom/gpu": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{print $1\"%\"}'",
+        "format": "󰿵 {}",
+        "interval": 2,
+        "tooltip": false
     },
 
     "pulseaudio": {

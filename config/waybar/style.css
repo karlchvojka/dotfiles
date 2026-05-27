@@ -1,0 +1,132 @@
+/* -----------------------------------------------------
+ * Global
+ * ----------------------------------------------------- */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 46, 0.85);
+  color: #cdd6f4;
+}
+
+/* -----------------------------------------------------
+ * Pill Groups
+ * ----------------------------------------------------- */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 4px 6px 4px 6px;
+}
+
+group {
+  background-color: rgba(30, 30, 46, 0.9);
+  border-radius: 20px;
+  margin: 0px 4px;
+  padding: 0px 6px;
+}
+
+#cpu,
+#memory,
+#custom-gpu {
+  background-color: rgba(17, 17, 27, 0.95);
+  border-radius: 20px;
+  margin: 4px 2px;
+  padding: 0px 12px;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+#workspaces {
+  padding: 0px 4px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: #7f849c;
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 4px 2px;
+}
+
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+  color: #1e1e2e;
+  background-color: #89b4fa;
+}
+
+#workspaces button.urgent {
+  background-color: #f38ba8;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#tray,
+#custom-power,
+#custom-gpu,
+#window {
+  padding: 0 12px;
+  color: #cdd6f4;
+}
+
+#clock {
+  color: #89b4fa;
+  font-weight: bold;
+}
+
+#cpu {
+  color: #a6e3a1;
+}
+
+#memory {
+  color: #f9e2af;
+}
+
+#custom-gpu {
+  color: #cba6f7;
+}
+
+#pulseaudio {
+  color: #89dceb;
+}
+
+#pulseaudio.muted {
+  color: #f38ba8;
+}
+
+#network {
+  color: #a6e3a1;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#custom-power {
+  color: #f38ba8;
+  font-size: 16px;
+  padding-right: 16px;
+}
+
+#tray {
+  padding: 0 8px;
+}
+
+#window {
+  color: #6c7086;
+  font-style: italic;
+}
