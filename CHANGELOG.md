@@ -59,6 +59,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Notes
 
+## [1.0.1] - 2026-05-27 - Config File Additions
+
+### ADDED
+
+#### ./config
+
+- Added all the config files into their own folders.
+
+#### ./scripts/setup-sims.sh
+
+- Script to automatically add simlinks from the config files to the ones here in the repo.
+
 ---
 
 ## Template for Future Entries

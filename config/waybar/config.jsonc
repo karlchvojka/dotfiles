@@ -1,0 +1,94 @@
+// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗
+// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+    "reload_style_on_change": true,
+
+    // Left side modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    // Center modules
+    "modules-center": [
+        "clock"
+    ],
+
+    // Right side modules
+    "modules-right": [
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "network",
+        "tray",
+        "custom/power"
+    ],
+
+    // -----------------------------------------------------
+    // MODULE CONFIGURATIONS
+    // -----------------------------------------------------
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+
+    "clock": {
+        "format": " {:%a %b %d  %I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "interval": 2
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " muted",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " connected",
+        "format-disconnected": "⚠ disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
+    }
+}
