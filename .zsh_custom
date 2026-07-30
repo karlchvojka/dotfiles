@@ -11,10 +11,19 @@ alias vpn-restart='~/dotfiles/scripts/vpn-restart.sh'
 # List Directory Shortcuts
 alias shortcuts='echo "Directory Shortcuts:"; echo "ARCHIVE: $ARCHIVE"; echo "ARCDOCS: $ARCDOCS"; echo "ARCNOTE: $ARCNOTE"; echo "PROJECTS: $PROJECTS"'
 
-# Restart VPN for TK
-
 # Directory Shortcuts
 export ARCHIVE="/run/media/blackburn/working_files/Archives"
 export ARCDOCS="/run/media/blackburn/working_files/Archives/Docs"
 export ARCNOTE="/run/media/blackburn/working_files/Archives/Notes"
 export PROJECTS="/run/media/blackburn/working_files/Projects/Repos/karlchvojka"
+
+echo "Command Shortcuts:"
+echo "la (List all)"
+echo "ls (List all long format"
+echo "vpn-restart (Restarts VPN for TK)"
+echo ""
+echo "Directory Shortcuts:"
+echo "cd $ARCHIVE (/working_files/Archives)"
+echo "cd $ARCDOCS (working_files/Archives/Docs"
+echo "cd $ARCNOTE (/working_files/Archvies/Notes"
+echo "cd $PROJECTS (/working_files/Projects/Repos/karlchvojka"
