@@ -34,7 +34,7 @@ alias la='ls -alhF --group-directories-first --color=auto'
 alias ls='ls -AlhF --group-directories-first --color=auto'
 
 # Directory Shortcuts
-export ARCHIVE="/run/media/blackburn/working_files/Archives"
-export ARCDOCS="/run/media/blackburn/working_files/Archives/Docs"
-export ARCNOTE="/run/media/blackburn/working_files/Archives/Notes"
-export PROJECTS="/run/media/blackburn/working_files/Projects/Repos/karlchvojka"
+export ARCHIVE="/mnt/working_files/Archives"
+export ARCDOCS="/mnt/working_files/Archives/Docs"
+export ARCNOTE="/mnt/working_files/Archives/Notes"
+export PROJECTS="/mnt/working_files/Projects"
